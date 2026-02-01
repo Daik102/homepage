@@ -1,1 +1,1 @@
-This is an admin dashboard for the Odin Project.
+This is the homepage project for the Odin Project.
