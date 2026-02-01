@@ -3,250 +3,208 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard</title>
-  <link rel="stylesheet" href="admin-dashboard.css">
-  <link rel="icon" href="./icons/view-dashboard-custom.png" type="image/x-icon">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="icon" href="./icons/view-dashboard-custom.png" type="image/x-icon"> -->
 </head>
 <body>
-  <div class="container">
-    <nav class="sidebar">
-      <div>
-        <img src="./icons/view-dashboard.svg" alt="dashboard">
-        <h2>Odin dashboard</h2>
-      </div>
-      <ul class="first-ul">
-        <li>
-          <img src="./icons/home.svg" alt="home">
-          <p>Home</p>
-        </li>
-        <li>
-          <img src="./icons/card-account-details-outline.svg" alt="profile">
-          <p>Profile</p>
-        </li>
-        <li>
-          <img src="./icons/message-reply-outline.svg" alt="message">
-          <p>Messages</p>
-        </li>
-        <li>
-          <img src="./icons/clock-time-three-outline.svg" alt="history">
-          <p>History</p>
-        </li>
-        <li>
-          <img src="./icons/file-multiple-outline.svg" alt="tasks">
-          <p>Tasks</p>
-        </li>
-        <li>
-          <img src="./icons/account-group.svg" alt="communities">
-          <p>Communities</p>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <img src="./icons/cog.svg" alt="settings">
-          <p>Settings</p>
-        </li>
-        <li>
-          <img src="./icons/help-box-outline.svg" alt="support">
-          <p>Support</p>
-        </li>
-        <li>
-          <img src="./icons/shield-check-outline.svg" alt="privacy">
-          <p>Privacy</p>
-        </li>
-      </ul>
-    </nav>
+  <div class="wrapper">
     <header class="header">
-      <ul>
-        <li><label for="search"><img class="icons" src="./icons/magnify.svg" alt="search-button"></label></li>
-        <li><div><input type="text" id="search"></div></li>
-        <li><img class="icons" src="./icons/bell-ring-outline.svg" alt="notification-button" title="No notifications for now"></li>
-        <li><img class="sub-photo" src="./photos/orca.jpg" alt="orca"></li>
-        <li><a href="https://github.com/Daik102/admin-dashboard" target="_blank"><div class="username">@hikebed</div><div><span>Daik</span></div></a></li>
-      </ul>
-      <ul>
-        <li><p>Welcome to my portfolio site! These projects are based on <a class="odin-link" href="https://www.theodinproject.com/">the Odin Project</a>. <br>And the contents except the showcase below are dummy. I hope you enjoy!</p></li>
-        <li><button>New</button></li>
-        <li><button>Upload</button></li>
-        <li><button>Share</button></li>
+      <div class="header-img-container">
+        <img src="./photos/graycat.jpg" alt="">
+        <h1 class="my-name">Daik</h1>
+      </div>
+      <h2>About me</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa asperiores placeat illo fugit culpa architecto facere perferendis fugiat earum. Perspiciatis et magnam modi sit aliquid, quidem necessitatibus officiis consequuntur itaque!</p>
+      <ul class="icon-container">
+        <li>
+          <a href="">
+            <img src="./icons/cog.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="./icons/cog.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="./icons/cog.svg" alt="">
+          </a>
+        </li>
       </ul>
     </header>
     <main class="main">
-      <section class="projects">
-        <h3>My Projects</h3>
-        <ul>
-          <li>
-            <a href="https://daik102.github.io/battleship/" target="_blank">
-              <h4>12. Battleship</h4>
-              <p>It's time to fight! Search enemy ships and destroy them before the enemy destroys yours. The highest rank Admiral isn't easy to achieve.
-              </p>
+      <h2>My work</h2>
+      <ul>
+        <li>
+          <a href="https://daik102.github.io/battleship/" target="_blank">
+            <div class="dummy"></div>
+            <div class="title-row">
+              <h3>13. Battleship</h3>
               <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
-              <img src="./icons/eye-plus-outline.svg" alt="eye">
-              <img src="./icons/source-fork.svg" alt="fork">
-            </a>
-          </li>
-          <li>
-            <a href="https://daik102.github.io/weather-app/" target="_blank">
-              <h4>11. Weather App</h4>
-              <p>Enter the location and check the weather in your city! Weather forecasts can be selected for hourly, today/tomorrow, and 15 days.
-              </p>
-              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
-              <img src="./icons/eye-plus-outline.svg" alt="eye">
-              <img src="./icons/source-fork.svg" alt="fork">
-            </a>
-          </li>
-          <li>
-            <a href="https://daik102.github.io/todo-list/" target="_blank">
-              <h4>10. ToDo List</h4>
-              <p>Let's manage your schedule with this app! You can create projects to categorize your todos. You can also put on check-marks, edit and delete todos.
-              </p>
-              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
-              <img src="./icons/eye-plus-outline.svg" alt="eye">
-              <img src="./icons/source-fork.svg" alt="fork">
-            </a>
-          </li>
-          <li>
-            <a href="https://daik102.github.io/restaurant-page/" target="_blank">
-              <h4>9. Restaurant Page</h4>
-              <p>Welcome to our restaurant! It might feel guilty when you have burgers and shakes at the same time. But it's a cheat day today. Just go ahead.
-              </p>
-              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
-              <img src="./icons/eye-plus-outline.svg" alt="eye">
-              <img src="./icons/source-fork.svg" alt="fork">
-            </a>
-          </li>
-          <li>
-            <a href="https://daik102.github.io/tic-tac-toe/" target="_blank">
-              <h4>8. Tic Tac Toe</h4>
-              <p>A very easy game to play. You can choose the human mode or the robot mode. Can you beat the robot easily?
-              </p>
-              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
-              <img src="./icons/eye-plus-outline.svg" alt="eye">
-              <img src="./icons/source-fork.svg" alt="fork">
-            </a>
-          </li>
-          <li>
-            <a href="https://daik102.github.io/library/" target="_blank">
-              <h4>7. Library</h4>
-              <p>A simple library app that allows you to create, edit and delete book records. What's your five-star books?
-              </p>
-              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
-              <img src="./icons/eye-plus-outline.svg" alt="eye">
-              <img src="./icons/source-fork.svg" alt="fork">
-            </a>
-          </li>
-          <li>
-            <a href="https://daik102.github.io/sign-up-form/" target="_blank">
-              <h4>6. Sign-up Form</h4>
-              <p>This is a sign-up page featured with Cyberpunk. <span>Do androids dream of electric sheep? </span>by Philip K. Dick is one of my favorite novel.
-              </p>
-              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
-              <img src="./icons/eye-plus-outline.svg" alt="eye">
-              <img src="./icons/source-fork.svg" alt="fork">
-            </a>
-          </li>
-          <li>
-            <a href="https://daik102.github.io/calculator/" target="_blank">
-              <h4>5. Calculator</h4>
-              <p>A simple calculator with a bit of retro taste. Click and key-typing are both supported. If you try to divide with zero something might happen...
-              </p>
-              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
-              <img src="./icons/eye-plus-outline.svg" alt="eye">
-              <img src="./icons/source-fork.svg" alt="fork">
-            </a>
-          </li>
-          <li>
-            <a href="https://daik102.github.io/etch-a-sketch/" target="_blank">
-              <h4>4. Etch-a-Sketch</h4>
-              <p>This is an easy drawing app. You can draw a pixel art on it. Size adjustment, eraser, grid mode and graduation mode are implemented for now.
-              </p>
-              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
-              <img src="./icons/eye-plus-outline.svg" alt="eye">
-              <img src="./icons/source-fork.svg" alt="fork">
-            </a>
-          </li>
-          <li>
-            <a href="https://daik102.github.io/rock-paper-scissors/" target="_blank">
-              <h4>3. Rock Paper Scissors</h4>
-              <p>The first project writing with JavaScript. You came to the entrance of the dungeon to fight against the monsters with rock paper scissors game.
-              </p>
-              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
-              <img src="./icons/eye-plus-outline.svg" alt="eye">
-              <img src="./icons/source-fork.svg" alt="fork">
-            </a>
-          </li>
-          <li>
-            <a href="https://daik102.github.io/landing-page/" target="_blank">
-              <h4>2. Landing Page</h4>
-              <p>A very simple web site with a pop and cute taste. You might see a great quote there.
-              </p>
-              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
-              <img src="./icons/eye-plus-outline.svg" alt="eye">
-              <img src="./icons/source-fork.svg" alt="fork">
-            </a>
-          </li>
-          <li>
-            <a href="https://daik102.github.io/odin-recipes/" target="_blank">
-              <h4>1. Recipes</h4>
-              <p>This is the first project on the Odin Project. There are three recipes you can check out for now. All of them look so delicious.
-              </p>
-              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
-              <img src="./icons/eye-plus-outline.svg" alt="eye">
-              <img src="./icons/source-fork.svg" alt="fork">
-            </a>
-          </li>
-        </ul>
-      </section>
-      <section class="announcements">
-        <h3>Announcements</h3>
-        <ul>
-          <li>
-            <h5>Site Update</h5>
-            <p>January 12 2026<br>Project Battleship added.</p>
-          </li>
-          <li>
-            <h5>Motorcycle Day</h5>
-            <p>In Japan, August 19 is recognized as Motorcycle day. Let's ride on this day to celebrate.</p>
-          </li>
-          <li>
-            <h5>Life Policy</h5>
-            <p>Just follow your intuition and inner voice. Life is short and only once.</p>
-          </li>
-        </ul>
-      </section>
-      <section class="trending">
-        <h3>You might like...</h3>
-        <ul>
-          <li>
-            <img src="./photos/australian-shepherd.jpg" alt="female-dog">
-            <div>
-              <h6>@love_swimming</h6>
-              <p>Sally</p>
             </div>
-          </li>
-          <li>
-            <img src="./photos/graycat.jpg" alt="gray-cat">
-            <div>
-              <h6>@s901</h6>
-              <p>Moon</p>
+            <p>It's time to fight! Search enemy ships and destroy them before the enemy destroys yours. The highest rank Admiral isn't easy to achieve.
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="https://daik102.github.io/weather-app/" target="_blank">
+            <div class="dummy"></div>
+            <div class="title-row">
+              <h3>12. Weather App</h3>
+              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
             </div>
-          </li>
-          <li>
-            <img src="./photos/white-dog-mini.jpg" alt="white-dog">
-            <div>
-              <h6>@snow_mountain</h6>
-              <p>Sierra</p>
+            <p>Enter the location and check the weather in your city! Weather forecasts can be selected for hourly, today/tomorrow, and 15 days.
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="https://daik102.github.io/todo-list/" target="_blank">
+            <div class="dummy"></div>
+            <div class="title-row">
+              <h3>11. ToDo List</h3>
+              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
             </div>
-          </li>
-          <li>
-            <img src="./photos/hedgehog.avif" alt="hedgehog">
-            <div>
-              <h6>@mr_hog</h6>
-              <p>Bob</p>
+            <p>Let's manage your schedule with this app! You can create projects to categorize your todos. You can also put on check-marks, edit and delete todos.
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="https://daik102.github.io/restaurant-page/" target="_blank">
+            <div class="dummy"></div>
+            <div class="title-row">
+              <h3>10. Restaurant Page</h3>
+              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
             </div>
-          </li>
-        </ul>
-      </section>
+            
+            <p>Welcome to our restaurant! It might feel guilty when you have burgers and shakes at the same time. But it's a cheat day today. Just go ahead.
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="https://daik102.github.io/tic-tac-toe/" target="_blank">
+            <div class="dummy"></div>
+            <div class="title-row">
+              <h3>9. Tic Tac Toe</h3>
+              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
+            </div>
+            <p>A very easy game to play. You can choose the human mode or the robot mode. Can you beat the robot easily?
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="https://daik102.github.io/library/" target="_blank">
+            <div class="dummy"></div>
+            <div class="title-row">
+              <h3>8. Library</h3>
+              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
+            </div>
+            <p>A simple library app that allows you to create, edit and delete book records. What's your five-star books?
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="https://daik102.github.io/admin-dashboard/" target="_blank">
+            <div class="dummy"></div>
+            <div class="title-row">
+              <h3>7. Admin Dashboard</h3>
+              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
+            </div>
+            <p>
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="https://daik102.github.io/sign-up-form/" target="_blank">
+            <div class="dummy"></div>
+            <div class="title-row">
+              <h3>6. Sign-up Form</h3>
+              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
+            </div>
+            <p>This is a sign-up page featured with Cyberpunk. <span>Do androids dream of electric sheep? </span>by Philip K. Dick is one of my favorite novel.
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="https://daik102.github.io/calculator/" target="_blank">
+            <div class="dummy"></div>
+            <div class="title-row">
+              <h3>5. Calculator</h3>
+              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
+            </div>
+            <p>A simple calculator with a bit of retro taste. Click and key-typing are both supported. If you try to divide with zero something might happen...
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="https://daik102.github.io/etch-a-sketch/" target="_blank">
+            <div class="dummy"></div>
+            <div class="title-row">
+              <h3>4. Etch-a-Sketch</h3>
+              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
+            </div>
+            <p>This is an easy drawing app. You can draw a pixel art on it. Size adjustment, eraser, grid mode and graduation mode are implemented for now.
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="https://daik102.github.io/rock-paper-scissors/" target="_blank">
+            <div class="dummy"></div>
+            <div class="title-row">
+              <h3>3. Rock Paper Scissors</h3>
+              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
+            </div>
+            <p>The first project writing with JavaScript. You came to the entrance of the dungeon to fight against the monsters with rock paper scissors game.
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="https://daik102.github.io/landing-page/" target="_blank">
+            <div class="dummy"></div>
+            <div class="title-row">
+              <h3>2. Landing Page</h3>
+              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
+            </div>
+            <p>A very simple web site with a pop and cute taste. You might see a great quote there.
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="https://daik102.github.io/odin-recipes/" target="_blank">
+            <div class="dummy"></div>
+            <div class="title-row">
+              <h3>1. Recipes</h3>
+              <img class="first-icon" src="./icons/star-plus-outline.svg" alt="star">
+            </div>
+            <p>This is the first project on the Odin Project. There are three recipes you can check out for now. All of them look so delicious.
+            </p>
+          </a>
+        </li>
+      </ul>
     </main>
+    <footer class="footer">
+      <h2>Contact me</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam alias, soluta tenetur perspiciatis recusandae nam ratione voluptatum necessitatibus blanditiis id debitis reiciendis! Sit reprehenderit neque provident labore? Voluptates, autem quod?</p>
+      <ul class="icon-container">
+        <li>
+          <a href="">
+            <img src="./icons/cog.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="./icons/cog.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="./icons/cog.svg" alt="">
+          </a>
+        </li>
+      </ul>
+      <img class="footer-img" src="./photos/australian-shepherd.jpg" alt="">
+    </footer>
   </div>
 </body>
 </html>
