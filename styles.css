@@ -13,21 +13,17 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 10px;
-  font-family: Play-Bold, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 :root {
   --black-theme: #111;
   --white-theme: aliceblue;
-  --main-theme: #575784;
-  --sub-theme: #232344;
-  --item-theme: #c7c7e4;
-  --button-theme: #4747e2;
-  --accent-theme: #2e2e57;
-  --hover-theme: #e1e1f7;
-  --button-hover-theme: #6969ff;
-  --orange-theme: #ffaf1a;
+  --blue-theme: mediumblue;
+  --light-blue-theme: rgb(177, 210, 255);
+  --light-gray-theme: #bbb;
   --paragraph-theme: #444;
+  --shadow-theme: rgba(5, 5, 11, 0.2);
   --dummy-theme: #999;
 }
 
@@ -37,12 +33,12 @@ body {
 
 h1 {
   margin-top: -5.4rem;
-  font-size: 4rem;
+  font-size: 3.6rem;
   color: var(--white-theme);
 }
 
 h2 {
-  color: var(--white-theme);
+  color: var(--black-theme);
   font-size: 2.8rem;
 }
 
@@ -64,7 +60,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(-20deg, var(--main-theme) calc(2 / 3 * 100%), var(--sub-theme) 0);
+  background-image: linear-gradient(-20deg, var(--white-theme) calc(2 / 3 * 100%), var(--light-blue-theme) 0);
   padding: 2rem;
 }
 
@@ -87,8 +83,8 @@ ul {
 
 .header p {
   font-size: 2rem;
-  margin-bottom: 0.8rem;
-  color: var(--white-theme);
+  margin-bottom: 1.6rem;
+  color: var(--black-theme);
 }
 
 .icon-container {
@@ -97,7 +93,7 @@ ul {
 }
 
 .icon-container img {
-  width: 3.2rem;
+  width: 2.8rem;
   height: auto;
 }
 
@@ -106,7 +102,7 @@ ul {
   flex-direction: column;
   align-items: center;
   padding: 4rem 0;
-  background-color: var(--main-theme);
+  background-color: var(--light-gray-theme);
 }
 
 .main h2 {
@@ -120,27 +116,20 @@ ul {
 }
 
 .main li {
-  background-color: var(--item-theme);
+  background-color: var(--white-theme);
   max-width: 40rem;
-  height: 40rem;
+  padding: 1.6rem 0.8rem;
   border-radius: 0.8rem;
-  box-shadow: 0.8rem 0.8rem 0.8rem 0 rgba(5, 5, 11, 0.2);
-  cursor: pointer;
-}
-
-.main a {
-  padding: 2rem;
-  
-}
-
-.main li:hover {
-  background-color: var(--hover-theme);
+  box-shadow: 0.8rem 0.8rem 0.8rem 0 var(--shadow-theme);
 }
 
 .dummy {
   height: 20rem;
   margin: 1rem 2rem 2rem;
   background-color: var(--dummy-theme);
+}
+.dummy:hover {
+  opacity: 0.7;
 }
 
 .title-row {
@@ -154,7 +143,7 @@ ul {
 .main h3 {
   font-size: 2.2rem;
   font-weight: 600;
-  color: var(--main-theme);
+  color: var(--blue-theme);
 }
 
 .title-row img {
@@ -167,12 +156,10 @@ ul {
   font-size: 1.8rem;
   line-height: 1.4;
   color: var(--paragraph-theme);
-  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 .main span {
   font-size: 1.8rem;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-style: italic;
 }
 
@@ -180,20 +167,40 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
-  background-color: var(--main-theme);
+  padding-top: 2rem;
+  background-color: var(--light-blue-theme);
+}
+
+.email-address-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.email-address-row img {
+  width: 2.8rem;
+}
+
+.email-address-row a {
+  font-size: 2rem;
+  color: var(--black-theme);
+}
+
+.email-address-row a:hover {
+  text-decoration: underline;
 }
 
 .footer h2,
 .footer p {
-  color: var(--white-theme);
+  color: var(--black-theme);
 }
 
 .footer h2 {
-  margin-bottom: 0.8rem;
+  margin: 1.2rem 0 2rem;
 }
 
 .footer p {
+  padding: 0 2rem;
   font-size: 1.8rem;
 }
 
