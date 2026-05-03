@@ -1,3 +1,46 @@
+const linkList = [{
+  name: 'github',
+  url: 'https://github.com/Daik102',
+  class: '',
+  icon: './icons/github-mark.svg',
+}, {
+  name: 'css-battle',
+  url: 'https://cssbattle.dev/player/hikebed',
+  class: 'cssbattle-icon',
+  icon: './icons/sword-cross.svg',
+}, {
+  name: 'youtube',
+  url: 'https://www.youtube.com/@nostalgicwalkway/videos',
+  class: 'youtube-icon',
+  icon: './icons/youtube-icon.png',
+}];
+
+const headerLinkContainer = document.querySelector('.header-link-container');
+const footerLinkContainer = document.querySelector('.footer-link-container');
+let linkHTML = '';
+
+for (const link of linkList) {
+  linkHTML += `
+    <li>
+      <a href="${link.url}" target="_blank">
+        <img class="icon link-icon ${link.class}" src="${link.icon}" alt="${link.name}">
+      </a>
+    </li>
+  `;
+}
+
+footerLinkContainer.innerHTML = linkHTML;
+
+linkHTML += `
+  <li class="light-switch-container">
+    <button class="light-switch-btn dark-mode">
+      <img class="icon header-icon light-switch-icon" src="./icons/moon.svg" alt="dark-mode">
+    </button>
+  </li>
+`;
+
+headerLinkContainer.innerHTML = linkHTML;
+
 const workList = [{
   title: 'battleship',
   header: '13. Battleship',

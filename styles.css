@@ -85,7 +85,6 @@ html {
 
 .header-link-container,
 .footer-link-container {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,13 +93,16 @@ html {
   list-style-type: none;
 }
 
+.header-link-container {
+  position: relative;
+}
+
 .header-link-container a,
 .footer-link-container a {
   text-decoration: none;
 }
 
-.header-icon,
-.footer-icon {
+.link-icon {
   width: 2.8rem;
   filter: invert(11%) sepia(0%) saturate(0%) hue-rotate(267deg) brightness(99%) contrast(94%);
 }
@@ -424,7 +426,6 @@ html {
     padding: 6rem 0;
   }
 }
-
 /* For smartphones in landscape mode */
 @media screen and (orientation: landscape) {
   html {
