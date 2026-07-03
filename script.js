@@ -126,7 +126,7 @@ for (const work of workList) {
   } else {
     workHTML += `
       <li class="work-list-item">
-        <a tabindex="-1" href="https://${work.title}-beta-indol.vercel.app/" target="_blank">
+        <a tabindex="-1" href="https://${work.title}-beta-indol.vercel.app" target="_blank">
           <img class="site-screenshot" src="./screenshots/${work.title}.png" alt="">
         </a>
         <div class="title-row">
