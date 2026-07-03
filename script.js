@@ -126,18 +126,18 @@ for (const work of workList) {
   } else {
     workHTML += `
       <li class="work-list-item">
-        <a tabindex="-1" href="https:/${work.title}-beta-indol.vercel.app/" target="_blank">
+        <a tabindex="-1" href="https://${work.title}-beta-indol.vercel.app/" target="_blank">
           <img class="site-screenshot" src="./screenshots/${work.title}.png" alt="">
         </a>
         <div class="title-row">
-          <a href="https://daik102.github.io/${work.title}/" target="_blank">
+          <a href="https://${work.title}-beta-indol.vercel.app/" target="_blank">
             <h3 class="work-title">${work.header}</h3>
           </a>
           <a href="https://github.com/Daik102/${work.title}" target="_blank">
             <img class="icon work-icon" src="./icons/github-mark.svg" alt="github"/>
           </a>
         </div>
-        <a tabindex="-1" href="https://daik102.github.io/${work.title}/" target="_blank">
+        <a tabindex="-1" href="https://${work.title}-beta-indol.vercel.app/" target="_blank">
           <p class="work-description">${work.description}</p>
         </a>
       </li>
