@@ -42,6 +42,11 @@ linkHTML += `
 headerLinkContainer.innerHTML = linkHTML;
 
 const workList = [{
+  title: 'cv-application',
+  header: '14. CV Application',
+  description: 'This is my first React project. It can update your information immediately using the useState hook.',
+  vercel: true,
+},{
   title: 'battleship',
   header: '13. Battleship',
   description: 'Search and destroy the enemy fleet before they beat you. The legendary rank Admiral isn\'t easy to achieve.',
@@ -99,24 +104,45 @@ const workListItemContainer = document.querySelector('.work-list-item-container'
 let workHTML = '';
 
 for (const work of workList) {
-  workHTML += `
-    <li class="work-list-item">
-      <a tabindex="-1" href="https://daik102.github.io/${work.title}/" target="_blank">
-        <img class="site-screenshot" src="./screenshots/${work.title}.png" alt="">
-      </a>
-      <div class="title-row">
-        <a href="https://daik102.github.io/${work.title}/" target="_blank">
-          <h3 class="work-title">${work.header}</h3>
+  if (!work.vercel) {
+    workHTML += `
+      <li class="work-list-item">
+        <a tabindex="-1" href="https://daik102.github.io/${work.title}/" target="_blank">
+          <img class="site-screenshot" src="./screenshots/${work.title}.png" alt="">
         </a>
-        <a href="https://github.com/Daik102/${work.title}" target="_blank">
-          <img class="icon work-icon" src="./icons/github-mark.svg" alt="github"/>
+        <div class="title-row">
+          <a href="https://daik102.github.io/${work.title}/" target="_blank">
+            <h3 class="work-title">${work.header}</h3>
+          </a>
+          <a href="https://github.com/Daik102/${work.title}" target="_blank">
+            <img class="icon work-icon" src="./icons/github-mark.svg" alt="github"/>
+          </a>
+        </div>
+        <a tabindex="-1" href="https://daik102.github.io/${work.title}/" target="_blank">
+          <p class="work-description">${work.description}</p>
         </a>
-      </div>
-      <a tabindex="-1" href="https://daik102.github.io/${work.title}/" target="_blank">
-        <p class="work-description">${work.description}</p>
-      </a>
-    </li>
-  `;
+      </li>
+    `;
+  } else {
+    workHTML += `
+      <li class="work-list-item">
+        <a tabindex="-1" href="https:/${work.title}-beta-indol.vercel.app/" target="_blank">
+          <img class="site-screenshot" src="./screenshots/${work.title}.png" alt="">
+        </a>
+        <div class="title-row">
+          <a href="https://daik102.github.io/${work.title}/" target="_blank">
+            <h3 class="work-title">${work.header}</h3>
+          </a>
+          <a href="https://github.com/Daik102/${work.title}" target="_blank">
+            <img class="icon work-icon" src="./icons/github-mark.svg" alt="github"/>
+          </a>
+        </div>
+        <a tabindex="-1" href="https://daik102.github.io/${work.title}/" target="_blank">
+          <p class="work-description">${work.description}</p>
+        </a>
+      </li>
+    `;
+  }
 }
 
 workListItemContainer.innerHTML = workHTML;
