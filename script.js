@@ -42,107 +42,119 @@ linkHTML += `
 headerLinkContainer.innerHTML = linkHTML;
 
 const workList = [{
+  title: 'memory-card',
+  header: '15. Memory Card',
+  description: 'Choose the 12 cards without repeats. All images are from the Unsplash API using the useEffect hook.',
+  url: 'https://memory-card-dun-sigma.vercel.app',
+  repoUrl: 'https://github.com/Daik102/memory-card',
+}, {
   title: 'cv-application',
   header: '14. CV Application',
   description: 'This is my first React project. It can update your information immediately using the useState hook.',
-  vercel: true,
-},{
+  url: 'https://cv-application-beta-indol.vercel.app',
+  repoUrl: 'https://github.com/Daik102/cv-application',
+}, {
   title: 'battleship',
   header: '13. Battleship',
   description: 'Search and destroy the enemy fleet before they beat you. The legendary rank Admiral isn\'t easy to achieve.',
+  url: 'https://daik102.github.io/battleship/',
+  repoUrl: 'https://github.com/Daik102/battleship',
 }, {
   title: 'weather-app',
   header: '12. Weather App',
   description: 'Let\'s check the weather in your city. Three time spans (Hourly, today/tomorrow, and 15 days) are available.',
+  url: 'https://daik102.github.io/weather-app/',
+  repoUrl: 'https://github.com/Daik102/weather-app',
 }, {
   title: 'todo-list',
   header: '11. ToDo List',
   description: 'If you have many things to do, you can manage your todos with this app.',
+  url: 'https://daik102.github.io/todo-list/',
+  repoUrl: 'https://github.com/Daik102/todo-list',
 }, {
   title: 'restaurant-page',
   header: '10. Restaurant Page',
   description: 'Welcome to our restaurant! We offer the best burgers and shakes for you.',
+  url: 'https://daik102.github.io/restaurant-page/',
+  repoUrl: 'https://github.com/Daik102/restaurant-page',
 }, {
   title: 'tic-tac-toe',
   header: '9. Tic Tac Toe',
   description: 'A very simple game to play. Human mode and robot mode are available. Can you beat the robot easily?',
+  url: 'https://daik102.github.io/tic-tac-toe/',
+  repoUrl: 'https://github.com/Daik102/tic-tac-toe',
 }, {
   title: 'library',
   header: '8. Library',
   description: 'If you\'re a book person, you can manage your books with this app. What\'s your five-star books?',
+  url: 'https://daik102.github.io/library/',
+  repoUrl: 'https://github.com/Daik102/library',
 }, {
   title: 'admin-dashboard',
   header: '7. Admin Dashboard',
   description: 'This is my alternative portfolio page with different layout and design. All project links are the same.',
+  url: 'https://daik102.github.io/admin-dashboard/',
+  repoUrl: 'https://github.com/Daik102/admin-dashboard',
 }, {
   title: 'sign-up-form',
   header: '6. Sign-up Form',
   description: 'A sign-up page featured with Cyberpunk. <span class="italic">Do androids dream of electric sheep? </span> by Philip K. Dick is my favorite novel.',
+  url: 'https://daik102.github.io/sign-up-form/',
+  repoUrl: 'https://github.com/Daik102/sign-up-form',
 }, {
   title: 'calculator',
   header: '5. Calculator',
   description: 'A simple calculator with a bit of retro taste. If you try to divide with zero something strange might happen...',
+  url: 'https://daik102.github.io/calculator/',
+  repoUrl: 'https://github.com/Daik102/calculator',
 }, {
   title: 'etch-a-sketch',
   header: '4. Etch-a-Sketch',
   description: 'Draw a pixel art with this app! Color picker, size adjustment, grid mode and graduation mode are available.',
+  url: 'https://daik102.github.io/etch-a-sketch/',
+  repoUrl: 'https://github.com/Daik102/etch-a-sketch',
 }, {
   title: 'rock-paper-scissors',
   header: '3. Rock Paper Scissors',
   description: 'You came to the entrance of the dungeon, where the monsters live. You fight them with the rock-paper-scissors game.',
+  url: 'https://daik102.github.io/rock-paper-scissors/',
+  repoUrl: 'https://github.com/Daik102/rock-paper-scissors',
 }, {
   title: 'landing-page',
   header: '2. Landing Page',
   description: 'A very simple landing-page with a bit of cute taste. You might see a great quote there.',
+  url: 'https://daik102.github.io/landing-page/',
+  repoUrl: 'https://github.com/Daik102/landing-page',
 }, {
   title: 'odin-recipes',
   header: '1. Recipes',
   description: 'The first project on the Odin Project. For people who love cooking, there are three recipes you can check out.',
+  url: 'https://daik102.github.io/odin-recipes/',
+  repoUrl: 'https://github.com/Daik102/odin-recipes',
 }, ];
 
 const workListItemContainer = document.querySelector('.work-list-item-container');
 let workHTML = '';
 
 for (const work of workList) {
-  if (!work.vercel) {
-    workHTML += `
-      <li class="work-list-item">
-        <a tabindex="-1" href="https://daik102.github.io/${work.title}/" target="_blank">
-          <img class="site-screenshot" src="./screenshots/${work.title}.png" alt="">
+  workHTML += `
+    <li class="work-list-item">
+      <a tabindex="-1" href="${work.url}" target="_blank">
+        <img class="site-screenshot" src="./screenshots/${work.title}.png" alt="">
+      </a>
+      <div class="title-row">
+        <a href="${work.url}" target="_blank">
+          <h3 class="work-title">${work.header}</h3>
         </a>
-        <div class="title-row">
-          <a href="https://daik102.github.io/${work.title}/" target="_blank">
-            <h3 class="work-title">${work.header}</h3>
-          </a>
-          <a href="https://github.com/Daik102/${work.title}" target="_blank">
-            <img class="icon work-icon" src="./icons/github-mark.svg" alt="github"/>
-          </a>
-        </div>
-        <a tabindex="-1" href="https://daik102.github.io/${work.title}/" target="_blank">
-          <p class="work-description">${work.description}</p>
+        <a href="${work.repoUrl}" target="_blank">
+          <img class="icon work-icon" src="./icons/github-mark.svg" alt="github"/>
         </a>
-      </li>
-    `;
-  } else {
-    workHTML += `
-      <li class="work-list-item">
-        <a tabindex="-1" href="https://${work.title}-beta-indol.vercel.app" target="_blank">
-          <img class="site-screenshot" src="./screenshots/${work.title}.png" alt="">
-        </a>
-        <div class="title-row">
-          <a href="https://${work.title}-beta-indol.vercel.app/" target="_blank">
-            <h3 class="work-title">${work.header}</h3>
-          </a>
-          <a href="https://github.com/Daik102/${work.title}" target="_blank">
-            <img class="icon work-icon" src="./icons/github-mark.svg" alt="github"/>
-          </a>
-        </div>
-        <a tabindex="-1" href="https://${work.title}-beta-indol.vercel.app/" target="_blank">
-          <p class="work-description">${work.description}</p>
-        </a>
-      </li>
-    `;
-  }
+      </div>
+      <a tabindex="-1" href="${work.url}" target="_blank">
+        <p class="work-description">${work.description}</p>
+      </a>
+    </li>
+  `;
 }
 
 workListItemContainer.innerHTML = workHTML;
