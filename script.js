@@ -32,7 +32,8 @@ for (const link of linkList) {
 footerLinkContainer.innerHTML = linkHTML;
 
 linkHTML += `
-  <li class="light-switch-container">
+  <li class="spacer-container"></li>
+  <li>
     <button class="light-switch-btn dark-mode">
       <img class="icon header-icon light-switch-icon" src="./icons/moon.svg" alt="dark-mode">
     </button>
@@ -210,7 +211,9 @@ lightSwitchBtn.addEventListener('click', (e) => {
   `;
 
   footerImgContainer.innerHTML = `
-    <img class="bottom-photo" src="./photos/${bottomPhoto}.jpg" alt="">
+    <a href="#">
+      <img class="bottom-photo" src="./photos/${bottomPhoto}.jpg" alt="">
+    </a>
   `;
 
   header.classList.toggle('dark-purple-image');
