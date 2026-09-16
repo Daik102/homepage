@@ -43,6 +43,12 @@ linkHTML += `
 headerLinkContainer.innerHTML = linkHTML;
 
 const workList = [{
+  title: 'shopping-cart',
+  header: '16. Shopping Cart',
+  description: 'An e-commerce web app featuring API-driven product listings, live cart updates, client-side routing.',
+  url: 'https://shopping-cart-daik102.vercel.app/',
+  repoUrl: 'https://github.com/Daik102/shopping-cart',
+}, {
   title: 'memory-card',
   header: '15. Memory Card',
   description: 'Choose the 12 cards without repeats. All images are from the Unsplash API using the useEffect hook.',
