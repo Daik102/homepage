@@ -184,7 +184,7 @@ const footerImgContainer = document.querySelector('.footer-img-container');
 const footerDescription = document.querySelector('.footer-description');
 const emailAddress = document.querySelector('.email-address');
 
-lightSwitchBtn.addEventListener('click', (e) => {
+function toggleDarkMode(e) {
   let target = e.target.parentElement;
   let whiteFilter = '';
   let icon = '';
@@ -238,4 +238,6 @@ lightSwitchBtn.addEventListener('click', (e) => {
   footer.classList.toggle('super-dark-purple-background');
   footerDescription.classList.toggle('white-color');
   emailAddress.classList.toggle('white-color');
-});
+}
+
+lightSwitchBtn.addEventListener('click', (e) => toggleDarkMode(e));
