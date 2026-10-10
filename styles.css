@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Play-Bold, Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -23,8 +22,13 @@
 }
 
 html {
-  font-size: clamp(50%, 1vw + 0.25rem, 62.5%);
+  font-size: 50%;
+  font-family: Play-Bold, Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
+}
+
+button {
+  font-family: inherit;
 }
 
 .wrapper {
@@ -171,7 +175,7 @@ html {
 
 .work-list-item:hover {
   background-color: var(--purple-theme);
-  transform: translate(0, -1.6rem);
+  transform: translate(0, -1.2rem);
 }
 
 .work-list-item-container a {
@@ -269,7 +273,7 @@ html {
 
 .bottom-photo:hover {
   filter: sepia();
-  transition: 1s;
+  transition: 0.6s;
 }
 
 /* For dark mode */
@@ -317,8 +321,19 @@ html {
   background-color: var(--super-dark-purple-theme);
 }
 
-/* For tablets in portrait / medium or large smartphones in landscape */
+/* Middle and Large Smartphones */
+@media screen and (min-width: 24.25em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* Small Tablets */
 @media screen and (min-width: 48em) {
+  html {
+    font-size: 62.5%;
+  }
+
   .header {
     flex-direction: row;
     justify-content: center;
@@ -384,8 +399,8 @@ html {
   }
 }
 
-/* For tablets in landscape */
-@media screen and (orientation: landscape) and (min-width: 64em) {
+/* Large tablets */
+@media screen and (min-width: 64em) {
   .header-img-container {
     width: 48rem;
   }
@@ -400,7 +415,7 @@ html {
   }
 }
 
-/* For laptops and desktops */
+/* Desktops */
 @media screen and (orientation: landscape) and (min-width: 88em) {
   .header {
     padding: 3.2rem 0 7.2rem;
