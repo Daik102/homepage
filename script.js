@@ -32,7 +32,6 @@ for (const link of linkList) {
 footerLinkContainer.innerHTML = linkHTML;
 
 linkHTML += `
-  <li class="spacer-container"></li>
   <li>
     <button class="light-switch-btn dark-mode">
       <img class="icon header-icon light-switch-icon" src="./icons/moon.svg" alt="dark-mode">
@@ -167,74 +166,61 @@ for (const work of workList) {
 workListItemContainer.innerHTML = workHTML;
 
 const lightSwitchBtn = document.querySelector('.light-switch-btn');
-const header = document.querySelector('.header');
-const headerImageContainer = document.querySelector('.header-img-container');
-const headerDescriptionContainer = document.querySelector('.header-description-container');
-const headerDescription = document.querySelector('.header-description');
-const main = document.querySelector('.main');
+const lightSwitchIcon = document.querySelector('.light-switch-icon');
+const topPhotoElement = document.querySelector('.top-photo');
+const bottomPhotoElement = document.querySelector('.bottom-photo');
 const headerTitles = document.querySelectorAll('.header-title');
-const workListItems = document.querySelectorAll('.work-list-item');
-const workTitles = document.querySelectorAll('.work-title');
-const workDescriptions = document.querySelectorAll('.work-description');
 const icons = document.querySelectorAll('.icon');
 const cssbattleIcons = document.querySelectorAll('.cssbattle-icon');
 const youtubeIcons = document.querySelectorAll('.youtube-icon');
+const header = document.querySelector('.header');
+const headerDescriptionContainer = document.querySelector('.header-description-container');
+const headerDescription = document.querySelector('.header-description');
+const main = document.querySelector('.main');
+const workListItems = document.querySelectorAll('.work-list-item');
+const workTitles = document.querySelectorAll('.work-title');
+const workDescriptions = document.querySelectorAll('.work-description');
 const footer = document.querySelector('.footer');
-const footerImgContainer = document.querySelector('.footer-img-container');
 const footerDescription = document.querySelector('.footer-description');
 const emailAddress = document.querySelector('.email-address');
 
 function toggleDarkMode(e) {
-  let target = e.target.parentElement;
-  let whiteFilter = '';
-  let icon = '';
-  let mode = '';
-  let topPhoto = '';
-  let bottomPhoto = '';
-  
+  lightSwitchBtn.classList.toggle('dark-mode');
+
+  const target = e.target.parentElement;
+  let icon = 'sun';
+  let mode = 'light-mode';
+  let topPhoto = 'night-park-clock';
+  let bottomPhoto = 'night-park-house';
+
   if (target.classList.contains('dark-mode')) {
-    lightSwitchBtn.classList.toggle('dark-mode');
-    whiteFilter = 'white-filter';
-    icon = 'sun';
-    mode = 'light-mode'
-    topPhoto = 'night-park-clock';
-    bottomPhoto = 'night-park-house';
-  } else {
-    lightSwitchBtn.classList.toggle('dark-mode');
     icon = 'moon';
     mode = 'dark-mode';
     topPhoto = 'forest-road-and-clouds';
     bottomPhoto = 'shadow-on-the-road';
   }
   
-  lightSwitchBtn.innerHTML = `
-    <img class="icon header-icon light-switch-icon ${whiteFilter}" src="./icons/${icon}.svg" alt="${mode}">
-  `;
-
-  headerImageContainer.innerHTML = `
-    <img class="top-photo" src="./photos/${topPhoto}.jpg" alt="">
-    <h1 class="my-name">Daik</h1>
-  `;
-
-  footerImgContainer.innerHTML = `
-    <a href="#">
-      <img class="bottom-photo" src="./photos/${bottomPhoto}.jpg" alt="">
-    </a>
-  `;
-
+  lightSwitchIcon.setAttribute('src', `./icons/${icon}.svg`);
+  lightSwitchIcon.setAttribute('alt', `${mode}`);
+  topPhotoElement.setAttribute('src', `./photos/${topPhoto}.jpg`);
+  bottomPhotoElement.setAttribute('src', `./photos/${bottomPhoto}.jpg`);
+  // Cross sectional toggles
+  headerTitles.forEach((title) => title.classList.toggle('white-color'));
+  icons.forEach((icon) => icon.classList.toggle('white-filter'));
+  cssbattleIcons.forEach((icon) => icon.classList.toggle('yellow-filter'));
+  youtubeIcons.forEach((icon) => icon.classList.toggle('no-filter'));
+  // Header toggles
   header.classList.toggle('dark-purple-image');
   headerDescriptionContainer.classList.toggle('dark-header-description-container');
   headerDescription.classList.toggle('white-color');
   headerDescription.classList.toggle('dark-gray-background');
+  // Main toggles
   main.classList.toggle('dark-purple-background');
-  headerTitles.forEach((title) => title.classList.toggle('white-color'));
   workListItems.forEach((item) => item.classList.toggle('dark-gray-background'));
   workListItems.forEach((item) => item.classList.toggle('dark-list-item'));
   workTitles.forEach((title) => title.classList.toggle('purple-color'));
   workDescriptions.forEach((description) => description.classList.toggle('white-color'));
-  icons.forEach((icon) => icon.classList.toggle('white-filter'));
-  cssbattleIcons.forEach((icon) => icon.classList.toggle('yellow-filter'));
-  youtubeIcons.forEach((icon) => icon.classList.toggle('no-filter'));
+  // Footer toggles
   footer.classList.toggle('super-dark-purple-background');
   footerDescription.classList.toggle('white-color');
   emailAddress.classList.toggle('white-color');
