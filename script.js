@@ -22,7 +22,7 @@ let linkHTML = '';
 for (const link of linkList) {
   linkHTML += `
     <li>
-      <a href="${link.url}" target="_blank">
+      <a href="${link.url}">
         <img class="icon link-icon ${link.class}" src="${link.icon}" alt="${link.name}">
       </a>
     </li>
@@ -145,18 +145,18 @@ let workHTML = '';
 for (const work of workList) {
   workHTML += `
     <li class="work-list-item">
-      <a tabindex="-1" href="${work.url}" target="_blank">
+      <a tabindex="-1" href="${work.url}">
         <img class="site-screenshot" src="./screenshots/${work.title}.png" alt="">
       </a>
       <div class="title-row">
-        <a href="${work.url}" target="_blank">
+        <a href="${work.url}">
           <h3 class="work-title">${work.header}</h3>
         </a>
-        <a href="${work.repoUrl}" target="_blank">
+        <a href="${work.repoUrl}">
           <img class="icon work-icon" src="./icons/github-mark.svg" alt="github"/>
         </a>
       </div>
-      <a tabindex="-1" href="${work.url}" target="_blank">
+      <a tabindex="-1" href="${work.url}">
         <p class="work-description">${work.description}</p>
       </a>
     </li>
